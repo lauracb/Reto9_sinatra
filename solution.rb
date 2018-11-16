@@ -1,7 +1,7 @@
 require 'sinatra'
 
 get '/' do  
-    if permiso['HTTP_PERMISO']
+    if env['HTTP_PERMISO']=="soy-un-token-secreto"
         "Si lo logramos!"
     else
         "Sin permiso"
